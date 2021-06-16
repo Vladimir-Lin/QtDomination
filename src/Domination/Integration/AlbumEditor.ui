@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AlbumEditor</class>
+ <widget class="QStackedWidget" name="AlbumEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Album editor</string>
+  </property>
+  <property name="toolTip">
+   <string>Album editor</string>
+  </property>
+  <property name="statusTip">
+   <string>Album editor</string>
+  </property>
+  <property name="whatsThis">
+   <string>Album editor</string>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QTabWidget" name="Main">
+   <property name="tabPosition">
+    <enum>QTabWidget::South</enum>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <widget class="QScrollArea" name="Profile">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <attribute name="title">
+     <string>Profile</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="PeopleTool">
+   <widget class="QToolButton" name="CheckNames">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>28</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/images/addpeople.png</normaloff>:/images/addpeople.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>28</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="AppendPeople">
+    <property name="geometry">
+     <rect>
+      <x>28</x>
+      <y>0</y>
+      <width>28</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>28</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="PeopleLanguages">
+    <property name="geometry">
+     <rect>
+      <x>56</x>
+      <y>0</y>
+      <width>320</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="Spacing">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>0</y>
+      <width>156</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Simplify spaces</string>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="EditAlbum">
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QLineEdit" name="Name">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>Album name</string>
+    </property>
+    <property name="statusTip">
+     <string>Album name</string>
+    </property>
+    <property name="whatsThis">
+     <string>Album name</string>
+    </property>
+    <property name="placeholderText">
+     <string>Album name</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="Languages">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QSplitter" name="CommoditiesItems">
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="handleWidth">
+     <number>1</number>
+    </property>
+    <widget class="QLabel" name="AlbumIcon">
+     <property name="minimumSize">
+      <size>
+       <width>128</width>
+       <height>128</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>128</width>
+       <height>128</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QWidget" name="Commodities" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>128</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>128</height>
+      </size>
+     </property>
+     <widget class="QCheckBox" name="hasCommodity">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>240</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Commodity</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="Company">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>240</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Company</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="FindAlbum">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>48</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Find album</string>
+      </property>
+      <property name="statusTip">
+       <string>Find album</string>
+      </property>
+      <property name="whatsThis">
+       <string>Find album</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/first.png</normaloff>:/images/first.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>48</width>
+        <height>48</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="AddAlbum">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>10</y>
+        <width>48</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Add album</string>
+      </property>
+      <property name="statusTip">
+       <string>Add album</string>
+      </property>
+      <property name="whatsThis">
+       <string>Add album</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>48</width>
+        <height>48</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="AlbumURL">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>480</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Album information URL</string>
+      </property>
+      <property name="statusTip">
+       <string>Album information URL</string>
+      </property>
+      <property name="whatsThis">
+       <string>Album information URL</string>
+      </property>
+      <property name="placeholderText">
+       <string>Album information URL</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="Dig">
+      <property name="geometry">
+       <rect>
+        <x>420</x>
+        <y>10</y>
+        <width>48</width>
+        <height>48</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/documentsearch.png</normaloff>:/images/documentsearch.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>48</width>
+        <height>48</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLineEdit" name="Identifier">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>Product identifier</string>
+    </property>
+    <property name="statusTip">
+     <string>Product identifier</string>
+    </property>
+    <property name="whatsThis">
+     <string>Product identifier</string>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(248,248,248)</string>
+    </property>
+    <property name="placeholderText">
+     <string>Identifier</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="Groups">
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QSplitter" name="GroupSelect">
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="handleWidth">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="GroupTools" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>56</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>56</width>
+       <height>28</height>
+      </size>
+     </property>
+     <widget class="QToolButton" name="AddGroup">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Add group</string>
+      </property>
+      <property name="statusTip">
+       <string>Add group</string>
+      </property>
+      <property name="whatsThis">
+       <string>Add group</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/android.png</normaloff>:/images/android.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>28</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="DeleteGroup">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>28</x>
+        <y>0</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Delete group</string>
+      </property>
+      <property name="statusTip">
+       <string>Delete group</string>
+      </property>
+      <property name="whatsThis">
+       <string>Delete group</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>:/images/closespeech.png</normaloff>:/images/closespeech.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>28</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QComboBox" name="UnusedGroupLists">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="editable">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QTreeWidget" name="GroupMember">
+    <property name="toolTip">
+     <string>Group member</string>
+    </property>
+    <property name="statusTip">
+     <string>Group member</string>
+    </property>
+    <property name="whatsThis">
+     <string>Group member</string>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="rootIsDecorated">
+     <bool>false</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="Clips">
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QSplitter" name="Actors">
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>AddGroup</sender>
+   <signal>clicked()</signal>
+   <receiver>AlbumEditor</receiver>
+   <slot>AddGroup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>15</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DeleteGroup</sender>
+   <signal>clicked()</signal>
+   <receiver>AlbumEditor</receiver>
+   <slot>DeleteGroup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>15</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CheckNames</sender>
+   <signal>clicked()</signal>
+   <receiver>AlbumEditor</receiver>
+   <slot>AddActor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>13</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AddAlbum</sender>
+   <signal>clicked()</signal>
+   <receiver>AlbumEditor</receiver>
+   <slot>NameChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>383</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>FindAlbum</sender>
+   <signal>clicked()</signal>
+   <receiver>AlbumEditor</receiver>
+   <slot>FindAlbum()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>323</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>GroupMember</sender>
+   <signal>itemClicked(QTreeWidgetItem*,int)</signal>
+   <receiver>AlbumEditor</receiver>
+   <slot>groupClicked(QTreeWidgetItem*,int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>314</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AppendPeople</sender>
+   <signal>clicked()</signal>
+   <receiver>AlbumEditor</receiver>
+   <slot>AppendPeople()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Dig</sender>
+   <signal>clicked()</signal>
+   <receiver>AlbumEditor</receiver>
+   <slot>Dig()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>572</x>
+     <y>91</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

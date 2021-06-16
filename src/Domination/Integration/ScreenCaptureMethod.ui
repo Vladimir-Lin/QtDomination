@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ScreenCaptureMethod</class>
+ <widget class="QWidget" name="ScreenCaptureMethod">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>380</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Methods to capture widget</string>
+  </property>
+  <widget class="QGroupBox" name="Capture">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>361</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Capture widget</string>
+   </property>
+   <widget class="QRadioButton" name="Desktop">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Desktop</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Window">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Window</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>360</width>
+     <height>230</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QRadioButton" name="Immediate">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Immediate</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Delay">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Delay</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="Period">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>320</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Period</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="Seconds">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>80</y>
+      <width>120</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="suffix">
+     <string> s</string>
+    </property>
+    <property name="prefix">
+     <string>After </string>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="maximum">
+     <number>999999999</number>
+    </property>
+    <property name="value">
+     <number>5</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="PeriodSeconds">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>140</y>
+      <width>120</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="suffix">
+     <string> s</string>
+    </property>
+    <property name="prefix">
+     <string>After </string>
+    </property>
+    <property name="maximum">
+     <number>999999999</number>
+    </property>
+    <property name="value">
+     <number>5</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="Record">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>140</y>
+      <width>120</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="suffix">
+     <string> s</string>
+    </property>
+    <property name="prefix">
+     <string>Record  </string>
+    </property>
+    <property name="maximum">
+     <number>999999999</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="Browse">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>180</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Images/Branon.qrc">
+      <normaloff>:/images/folder.png</normaloff>:/images/folder.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="Path">
+    <property name="geometry">
+     <rect>
+      <x>64</x>
+      <y>180</y>
+      <width>256</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Image store path</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Browse</sender>
+   <signal>clicked()</signal>
+   <receiver>ScreenCaptureMethod</receiver>
+   <slot>BrowsePath()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>71</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>189</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

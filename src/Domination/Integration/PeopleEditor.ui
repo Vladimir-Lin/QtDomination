@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PeopleEditor</class>
+ <widget class="QStackedWidget" name="PeopleEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>People editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/images/people.png</normaloff>:/images/people.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>People editor</string>
+  </property>
+  <property name="statusTip">
+   <string>People editor</string>
+  </property>
+  <property name="whatsThis">
+   <string>People editor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QTabWidget" name="Main">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::South</enum>
+   </property>
+   <property name="movable">
+    <bool>true</bool>
+   </property>
+   <widget class="QScrollArea" name="Profile">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAsNeeded</enum>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <attribute name="title">
+     <string>Profile</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="EditPeople">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>600</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="opaqueResize">
+    <bool>true</bool>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QSplitter" name="Important">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="handleWidth">
+     <number>1</number>
+    </property>
+    <widget class="QSplitter" name="IconDetails">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="handleWidth">
+      <number>1</number>
+     </property>
+     <widget class="QLabel" name="PeopleIcon">
+      <property name="minimumSize">
+       <size>
+        <width>144</width>
+        <height>144</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>144</width>
+        <height>144</height>
+       </size>
+      </property>
+      <property name="pixmap">
+       <pixmap>:/images/face.png</pixmap>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QSplitter" name="Details">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="handleWidth">
+      <number>1</number>
+     </property>
+     <widget class="QLineEdit" name="PeopleName">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="placeholderText">
+       <string>People name</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="BloodHeight">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QComboBox" name="Blood">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="insertPolicy">
+     <enum>QComboBox::NoInsert</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="Height">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="prefix">
+     <string>Height : </string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="Weight">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="suffix">
+     <string> kg</string>
+    </property>
+    <property name="prefix">
+     <string>Weight : </string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>500</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="BodyMeasures">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QSpinBox" name="Bust">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="prefix">
+     <string>Bust : </string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="Waist">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="prefix">
+     <string>Waist : </string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="Hip">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="prefix">
+     <string>Hip : </string>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>300</number>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="HistoryEvents">
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="HistoryButtons" native="true">
+    <property name="minimumSize">
+     <size>
+      <width>56</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>56</width>
+      <height>28</height>
+     </size>
+    </property>
+    <widget class="QToolButton" name="AddHistory">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>28</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Add history</string>
+     </property>
+     <property name="statusTip">
+      <string>Add history</string>
+     </property>
+     <property name="whatsThis">
+      <string>Add history</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>28</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="DeleteHistory">
+     <property name="geometry">
+      <rect>
+       <x>28</x>
+       <y>0</y>
+       <width>28</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Delete history</string>
+     </property>
+     <property name="statusTip">
+      <string>Delete history</string>
+     </property>
+     <property name="whatsThis">
+      <string>Delete history</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/images/imagemissing.png</normaloff>:/images/imagemissing.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>28</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QComboBox" name="HistoryTypes">
+    <property name="minimumSize">
+     <size>
+      <width>80</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>History types</string>
+    </property>
+    <property name="statusTip">
+     <string>History types</string>
+    </property>
+    <property name="whatsThis">
+     <string>History types</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="insertPolicy">
+     <enum>QComboBox::NoInsert</enum>
+    </property>
+   </widget>
+   <widget class="QDateTimeEdit" name="PeopleTime">
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="toolTip">
+     <string>History time</string>
+    </property>
+    <property name="statusTip">
+     <string>History time</string>
+    </property>
+    <property name="whatsThis">
+     <string>History time</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="displayFormat">
+     <string>yyyy/MM/dd hh:mm:ss</string>
+    </property>
+    <property name="calendarPopup">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTreeWidget" name="PeopleHistory">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>People history</string>
+   </property>
+   <property name="statusTip">
+    <string>People history</string>
+   </property>
+   <property name="whatsThis">
+    <string>People history</string>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="rootIsDecorated">
+    <bool>false</bool>
+   </property>
+   <property name="columnCount">
+    <number>3</number>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string notr="true">2</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string notr="true">3</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QSplitter" name="PeopleCrowds">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>56</width>
+     <height>28</height>
+    </size>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="CrowdsButtons" native="true">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>56</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>56</width>
+      <height>28</height>
+     </size>
+    </property>
+    <widget class="QToolButton" name="AddCrowd">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>28</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Add history</string>
+     </property>
+     <property name="statusTip">
+      <string>Add history</string>
+     </property>
+     <property name="whatsThis">
+      <string>Add history</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>28</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="DeleteCrowd">
+     <property name="geometry">
+      <rect>
+       <x>28</x>
+       <y>0</y>
+       <width>28</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>Delete history</string>
+     </property>
+     <property name="statusTip">
+      <string>Delete history</string>
+     </property>
+     <property name="whatsThis">
+      <string>Delete history</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>:/images/imagemissing.png</normaloff>:/images/imagemissing.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>28</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="autoRaise">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QTreeWidget" name="PeopleGroups">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="toolTip">
+    <string>People history</string>
+   </property>
+   <property name="statusTip">
+    <string>People history</string>
+   </property>
+   <property name="whatsThis">
+    <string>People history</string>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="rootIsDecorated">
+    <bool>false</bool>
+   </property>
+   <property name="columnCount">
+    <number>1</number>
+   </property>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>PeopleName</sender>
+   <signal>editingFinished()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>NameChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AddHistory</sender>
+   <signal>clicked()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>AddHistory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>13</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DeleteHistory</sender>
+   <signal>clicked()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>DeleteHistory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>158</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AddCrowd</sender>
+   <signal>clicked()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>AddCrowd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>13</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DeleteCrowd</sender>
+   <signal>clicked()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>DeleteCrowd()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Blood</sender>
+   <signal>activated(int)</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>PeopleBlood(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>142</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Height</sender>
+   <signal>editingFinished()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>PeopleHeight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>402</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Weight</sender>
+   <signal>editingFinished()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>PeopleWeight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>659</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Bust</sender>
+   <signal>editingFinished()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>PeopleBust()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Hip</sender>
+   <signal>editingFinished()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>PeopleHip()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Waist</sender>
+   <signal>editingFinished()</signal>
+   <receiver>PeopleEditor</receiver>
+   <slot>PeopleWaist()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>399</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

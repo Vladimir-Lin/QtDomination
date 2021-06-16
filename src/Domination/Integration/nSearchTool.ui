@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nSearchTool</class>
+ <widget class="QTabWidget" name="nSearchTool">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Search tools</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Images/Branon.qrc">
+    <normaloff>:/images/search.png</normaloff>:/images/search.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Search tools</string>
+  </property>
+  <property name="statusTip">
+   <string>Search tools</string>
+  </property>
+  <property name="whatsThis">
+   <string>Search tools</string>
+  </property>
+  <property name="tabPosition">
+   <enum>QTabWidget::South</enum>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="Generic">
+   <attribute name="title">
+    <string>Generic objects search</string>
+   </attribute>
+   <attribute name="toolTip">
+    <string>Generic objects search</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="Complex">
+   <attribute name="title">
+    <string>Complex syntax search</string>
+   </attribute>
+   <attribute name="toolTip">
+    <string>Complex syntax search</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="Pictures">
+   <attribute name="title">
+    <string>Search pictures</string>
+   </attribute>
+   <attribute name="toolTip">
+    <string>Search pictures</string>
+   </attribute>
+   <widget class="QToolButton" name="AddPicture">
+    <property name="geometry">
+     <rect>
+      <x>48</x>
+      <y>0</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Add search rule</string>
+    </property>
+    <property name="statusTip">
+     <string>Add search rule</string>
+    </property>
+    <property name="whatsThis">
+     <string>Add search rule</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Images/Branon.qrc">
+      <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="PictureItems">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>24</y>
+      <width>240</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Paraments</string>
+    </property>
+    <property name="statusTip">
+     <string>Paraments</string>
+    </property>
+    <property name="whatsThis">
+     <string>Paraments</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="PictureStack">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>48</y>
+      <width>240</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="Size">
+     <widget class="QCheckBox" name="PictureW">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Width</string>
+      </property>
+      <property name="statusTip">
+       <string>Width</string>
+      </property>
+      <property name="whatsThis">
+       <string>Width</string>
+      </property>
+      <property name="text">
+       <string>Width</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="PictureH">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>24</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>Height</string>
+      </property>
+      <property name="statusTip">
+       <string>Height</string>
+      </property>
+      <property name="whatsThis">
+       <string>Height</string>
+      </property>
+      <property name="text">
+       <string>Height</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>24</width>
+        <height>24</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="pwOp">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>0</y>
+        <width>60</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="phOp">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>24</y>
+        <width>60</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="pwValue">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>0</y>
+        <width>100</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100000</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="phValue">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>24</y>
+        <width>100</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>100000</number>
+      </property>
+      <property name="value">
+       <number>100</number>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Color">
+     <widget class="QComboBox" name="PictureC">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>80</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="pwColors">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>0</y>
+        <width>160</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+      <property name="value">
+       <number>10000</number>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QTreeWidget" name="PictureSearch">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>0</y>
+      <width>384</width>
+      <height>448</height>
+     </rect>
+    </property>
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="rootIsDecorated">
+     <bool>false</bool>
+    </property>
+    <property name="columnCount">
+     <number>3</number>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string notr="true">2</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string notr="true">3</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QComboBox" name="PictureOp">
+    <property name="geometry">
+     <rect>
+      <x>168</x>
+      <y>0</y>
+      <width>72</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Operations</string>
+    </property>
+    <property name="statusTip">
+     <string>Operations</string>
+    </property>
+    <property name="whatsThis">
+     <string>Operations</string>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="SearchPictures">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Search pictures</string>
+    </property>
+    <property name="statusTip">
+     <string>Search pictures</string>
+    </property>
+    <property name="whatsThis">
+     <string>Search pictures</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Images/Branon.qrc">
+      <normaloff>:/images/ScheduleZoomIn.png</normaloff>:/images/ScheduleZoomIn.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="RemovePicture">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>72</x>
+      <y>0</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Remove</string>
+    </property>
+    <property name="statusTip">
+     <string>Remove</string>
+    </property>
+    <property name="whatsThis">
+     <string>Remove</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Images/Branon.qrc">
+      <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="PictureUp">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>0</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Up</string>
+    </property>
+    <property name="statusTip">
+     <string>Up</string>
+    </property>
+    <property name="whatsThis">
+     <string>Up</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Images/Branon.qrc">
+      <normaloff>:/images/up.png</normaloff>:/images/up.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="PictureDown">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>144</x>
+      <y>0</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Down</string>
+    </property>
+    <property name="statusTip">
+     <string>Down</string>
+    </property>
+    <property name="whatsThis">
+     <string>Down</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Images/Branon.qrc">
+      <normaloff>:/images/down.png</normaloff>:/images/down.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="PictureScripts">
+    <property name="geometry">
+     <rect>
+      <x>24</x>
+      <y>0</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Picture scripts</string>
+    </property>
+    <property name="statusTip">
+     <string>Picture scripts</string>
+    </property>
+    <property name="whatsThis">
+     <string>Picture scripts</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Images/Branon.qrc">
+      <normaloff>:/images/plaintext.png</normaloff>:/images/plaintext.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="PictureTrash">
+    <property name="enabled">
+     <bool>false</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>96</x>
+      <y>0</y>
+      <width>24</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Clear all</string>
+    </property>
+    <property name="statusTip">
+     <string>Clear all</string>
+    </property>
+    <property name="whatsThis">
+     <string>Clear all</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Images/Branon.qrc">
+      <normaloff>:/images/recycle.png</normaloff>:/images/recycle.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
+    </property>
+    <property name="autoRaise">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="People">
+   <attribute name="title">
+    <string>Search people</string>
+   </attribute>
+   <attribute name="toolTip">
+    <string>Search people</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="Video">
+   <attribute name="title">
+    <string>Search videos</string>
+   </attribute>
+   <attribute name="toolTip">
+    <string>Search videos</string>
+   </attribute>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>PictureItems</sender>
+   <signal>activated(int)</signal>
+   <receiver>nSearchTool</receiver>
+   <slot>PictureItems(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>121</x>
+     <y>37</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PictureScripts</sender>
+   <signal>clicked()</signal>
+   <receiver>nSearchTool</receiver>
+   <slot>PictureScripts()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>37</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>SearchPictures</sender>
+   <signal>clicked()</signal>
+   <receiver>nSearchTool</receiver>
+   <slot>SearchPictures()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>13</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AddPicture</sender>
+   <signal>clicked()</signal>
+   <receiver>nSearchTool</receiver>
+   <slot>AddPictureRules()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>61</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RemovePicture</sender>
+   <signal>clicked()</signal>
+   <receiver>nSearchTool</receiver>
+   <slot>RemovePictures()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PictureTrash</sender>
+   <signal>clicked()</signal>
+   <receiver>nSearchTool</receiver>
+   <slot>TrashPictures()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PictureUp</sender>
+   <signal>clicked()</signal>
+   <receiver>nSearchTool</receiver>
+   <slot>PictureUp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>133</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>PictureDown</sender>
+   <signal>clicked()</signal>
+   <receiver>nSearchTool</receiver>
+   <slot>PictureDown()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>157</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

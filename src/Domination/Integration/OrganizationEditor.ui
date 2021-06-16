@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OrganizationEditor</class>
+ <widget class="QStackedWidget" name="OrganizationEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Organization editor</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Images/Branon.qrc">
+    <normaloff>:/images/manager.png</normaloff>:/images/manager.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Organization editor</string>
+  </property>
+  <property name="statusTip">
+   <string>Organization editor</string>
+  </property>
+  <property name="whatsThis">
+   <string>Organization editor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">gridline-color: rgb(44, 37, 255);</string>
+  </property>
+  <widget class="QTabWidget" name="Main">
+   <property name="tabPosition">
+    <enum>QTabWidget::South</enum>
+   </property>
+   <widget class="QScrollArea" name="Profile">
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="sizeAdjustPolicy">
+     <enum>QAbstractScrollArea::AdjustToContents</enum>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <attribute name="title">
+     <string>Profile</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="EditOrganization">
+   <property name="styleSheet">
+    <string notr="true">QSplitter::handle { background-color: rgb(224, 224, 224); }
+</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QLineEdit" name="Name">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="placeholderText">
+     <string>Organization name</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="OrganizationGroups">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSplitter::handle { background-color: rgb(224, 224, 224); }
+</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QSplitter" name="OrganizationTab">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="handleWidth">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="OrganizationGroupButtons" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>56</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <widget class="QToolButton" name="AddGroup">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../../Images/Branon.qrc">
+        <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>28</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="DeleteGroup">
+      <property name="geometry">
+       <rect>
+        <x>28</x>
+        <y>0</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../../Images/Branon.qrc">
+        <normaloff>:/images/flowend.png</normaloff>:/images/flowend.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>28</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QTreeWidget" name="GroupLists">
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="rootIsDecorated">
+     <bool>false</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="OrganizationTypes">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>16777215</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSplitter::handle { background-color: rgb(224, 224, 224); }
+</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <property name="handleWidth">
+    <number>1</number>
+   </property>
+   <widget class="QSplitter" name="OrganizationTypeTab">
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>28</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>16777215</height>
+     </size>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="handleWidth">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="OrganizationTypeButtons" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>56</width>
+       <height>28</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <widget class="QToolButton" name="AddType">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../../Images/Branon.qrc">
+        <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>28</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="DeleteType">
+      <property name="geometry">
+       <rect>
+        <x>28</x>
+        <y>0</y>
+        <width>28</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="../../Images/Branon.qrc">
+        <normaloff>:/images/flowend.png</normaloff>:/images/flowend.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>28</width>
+        <height>28</height>
+       </size>
+      </property>
+      <property name="autoRaise">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QTreeWidget" name="TypeLists">
+    <property name="alternatingRowColors">
+     <bool>true</bool>
+    </property>
+    <property name="rootIsDecorated">
+     <bool>false</bool>
+    </property>
+    <column>
+     <property name="text">
+      <string notr="true">1</string>
+     </property>
+    </column>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/Branon.qrc"/>
+  <include location="../../Images/Branon.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Name</sender>
+   <signal>editingFinished()</signal>
+   <receiver>OrganizationEditor</receiver>
+   <slot>NameChanged()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AddGroup</sender>
+   <signal>clicked()</signal>
+   <receiver>OrganizationEditor</receiver>
+   <slot>AddGroup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>13</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DeleteGroup</sender>
+   <signal>clicked()</signal>
+   <receiver>OrganizationEditor</receiver>
+   <slot>DeleteGroup()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AddType</sender>
+   <signal>clicked()</signal>
+   <receiver>OrganizationEditor</receiver>
+   <slot>AddType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>13</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>DeleteType</sender>
+   <signal>clicked()</signal>
+   <receiver>OrganizationEditor</receiver>
+   <slot>DeleteType()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>13</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>399</x>
+     <y>299</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

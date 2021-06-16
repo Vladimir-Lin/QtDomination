@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>com.neutrino.domination</namespace>
+    <virtualFolder>Domination</virtualFolder>
+    <customFilter name="CIOS Domination 1.6.0">
+        <filterAttribute>CIOS Domination</filterAttribute>
+        <filterAttribute>1.6.0</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>CIOS Domination</filterAttribute>
+        <filterAttribute>1.6.0</filterAttribute>
+        <toc>
+            <section title="CIOS Domination Manual" ref="index.html">
+                <section title="English" ref="en/index.html"/>
+                <section title="Traditional Chinese" ref="tw/index.html"/>
+                <section title="Simplified Chinese" ref="cn/index.html"/>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Domination" id="CIOS::Domination" ref="index.html"/>
+            <keyword name="Domination (English)" id="CIOS::DominationEN" ref="en/index.html"/>
+            <keyword name="Domination（正體中文）" id="CIOS::DominationTW" ref="tw/index.html"/>
+        </keywords>
+        <files>
+            <file>*.css</file>
+            <file>*.html</file>
+            <file>images/*</file>
+            <file>tw/*</file>
+            <file>en/*</file>
+            <file>cn/*</file>
+        </files>
+    </filterSection>
+</QtHelpProject>
